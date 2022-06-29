@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="../../css/first/navbar.css" />
+    <link rel="stylesheet" href="../../css/first/reponse_glo.css" />
+    <link rel="stylesheet" href="../../css/first/alifont.css" />
+    <link rel="stylesheet" href="../../css/first/navbar.css" />
+    <link rel="stylesheet" href="../../css/first/index.css" />
+    <link rel="stylesheet" href="../../css/first/css.css" />
+    <link rel="stylesheet" href="../../css/first/reponse_glo.css" />
+    <link rel="stylesheet" href="../../css/first/common.css" />
+
+    <link rel="stylesheet" href="../../css/first/center.css" />
+    <title>梅岭社区 颐养中心</title>
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../images/img/水墨3ps.png) no-repeat 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            /* z-index: -1; */
+        }
+    </style>
+</head>
+<body>
+<div class="bgimg">
+    <nav>
+        <div class="user">
+            <a href=""><img src="../../images/first/logo1.png" alt="" /></a>
+        </div>
+        <!--				<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+        <div class="search">
+            <div class="sput">
+                <input
+                        type="text"
+                        name="search"
+                        placeholder="搜索内容"
+                        id="searchContent"
+                />
+                <a href="#"><div class="icon"></div></a>
+                <!-- <img src="../../images/icon/搜索.png" alt="" /> -->
+            </div>
+            <!-- 汉堡按钮 -->
+            <div class="burger" id="toggle" onclick="navVisi()">
+                <div class="top-line"></div>
+                <div class="middle-line"></div>
+                <div class="bottom-line"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar">
+        <ul id="visiable" class="nav-menu">
+            <a href="/web/index"
+            >
+                <li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li>
+            </a
+            >
+            <a href="/web/learn"
+            >
+                <li>
+                    <i class="iconfont icon-lishi"></i>
+                    梅岭动态
+                </li>
+            </a
+            >
+            <a href="/web/theorystudy"
+            >
+                <li>
+                    <i class="iconfont icon-lilunxuexi"></i>
+                    百科问答
+                </li>
+            </a
+            >
+            <a href="/web/organization"
+            >
+                <li>
+                    <i class="iconfont icon-zixun"></i>
+                    健康养生
+                </li>
+            </a
+            >
+            <a href="/web/social"
+            >
+                <li>
+                    <i class="iconfont icon-deploymentunit"></i>
+                    养老社区
+                </li>
+            </a
+            >
+            <a href="/web/center" class="active"
+            >
+                <li>
+                    <i class="iconfont icon-gerenzhongxin"></i>
+                    关于我们
+                </li>
+            </a
+            >
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="train_banner" id="swiper">
+        <ul class="banner_images clearfix">
+            <li>
+                <a href="/web/index" target="_target">
+                    <img src="../../images/first/banner5.jpg" alt=""/>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <main class="main">
+        <div class="main-nav-p tac pt25 pb20">
+            <div class="">
+                <ul class="clearfix">
+
+                    <li >
+                        <h3><a href="/web/center">中心简介</a></h3>
+                    </li>
+
+                    <li>
+                        <h3><a href="/web/center2">中心架构</a></h3>
+                    </li>
+
+                    <li class="cur">
+                        <h3><a href="">愿景使命</a></h3>
+                    </li>
+
+                    <li>
+                        <h3><a href="/web/center4">中心活动</a></h3>
+                    </li>
+
+                    <li>
+                        <h3><a href="/web/center5">园区剪影</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="cen-container">
+    <div style="margin-left:50px;">
+        <br>
+        <br>
+        <img src="../../images/first/value.jpg">
+    </div>
+</div>
+<footer>
+    <div class="logo">
+    </div>
+    <div class="contents">
+        <h3 class="content">
+            版权所有：梅岭社区·颐养中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </h3>
+        <h3 class="content">邮箱：email@csu.cn.com</h3>
+        <h3 class="content">
+            联系方式：430-808-8888
+        </h3>
+    </div>
+</footer>
+
+<script src="../../js/response.js"></script>
+<script>
+    function toIndex() {
+        window.location.href = "/web/index";
+    }
+</script>
+</body>
+</html>

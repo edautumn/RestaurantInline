@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+		/>
+		<link rel="stylesheet" href="../../css/first/alifont.css" />
+		<link rel="stylesheet" href="../../css/first/navbar.css" />
+		<link rel="stylesheet" href="../../css/first/index.css" />
+		<link rel="stylesheet" href="../../css/first/css.css" />
+		<link rel="stylesheet" href="../../css/first/reponse_glo.css" />
+		<link rel="stylesheet" href="../../css/first/common.css" />
+		<title>梅岭社区·颐养中心</title>
+		<style>
+			body {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url(../../images/img/水墨3ps.png) no-repeat 100%;
+				background-size: cover;
+				background-attachment: fixed;
+				/* z-index: -1; */
+				transition: 0.3s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bgimg">
+			<nav>
+				<div class="user">
+					<a href="/web/index"><img src="../../images/first/logo1.png" alt="" /></a>
+				</div>
+<!--				<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+				<div class="search">
+					<div class="sput">
+						<input
+							type="text"
+							name="search"
+							placeholder="搜索内容"
+							id="searchContent"
+						/>
+						<a href="#"><div class="icon"></div></a>
+						 <img src="icon/搜索.png" alt="" />
+					</div>
+					<!-- 汉堡按钮 -->
+					<div class="burger" id="toggle" onclick="navVisi()">
+						<div class="top-line"></div>
+						<div class="middle-line"></div>
+						<div class="bottom-line"></div>
+					</div>
+				</div>
+			</nav>
+			<div class="navbar">
+				<ul id="visiable" class="nav-menu">
+					<a class="active" href="/web/index"
+					>
+						<li>
+							<i class="iconfont icon-shouye"></i>
+							首页
+						</li>
+					</a
+					>
+					<a href="/web/learn"
+					>
+						<li>
+							<i class="iconfont icon-lishi"></i>
+							梅岭动态
+						</li>
+					</a
+					>
+					<a href="/web/theorystudy"
+					>
+						<li>
+							<i class="iconfont icon-lilunxuexi"></i>
+							百科问答
+						</li>
+					</a
+					>
+					<a href="/web/organization"
+					>
+						<li>
+							<i class="iconfont icon-zixun"></i>
+							健康养生
+						</li>
+					</a
+					>
+					<a href="/web/social"
+					>
+						<li>
+							<i class="iconfont icon-deploymentunit"></i>
+							养老社区
+						</li>
+					</a
+					>
+					<a href="/web/center"
+					>
+						<li>
+							<i class="iconfont icon-gerenzhongxin"></i>
+							关于我们
+						</li>
+					</a
+					>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="train_banner" id="swiper">
+					<ul class="banner_images clearfix">
+						<li>
+							<a href="/web/topic" target="_target">
+								<img src="../../images/first/banner1.jpg" alt=""/>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="down-half">
+					<div class="down-left">
+						<div class="list-header">养老资讯</div>
+						<div class="list-bottom"></div>
+						 <div class="list-bottom2"></div>
+						<div class="list-items">
+							<div class="list-item">
+								<div class="item-img">
+									<img src="../../images/img/3.png" alt="" />
+								</div>
+								<div class="content">
+									<h1 class="title">
+										<a href="/web/topic" target="_blank">
+											聚焦"十四五"目标：健全多层次养老保险体系</a>
+									</h1>
+									<div class="detail">
+										社保是民生之基。“十四五”规划纲要提出，基本养老保险参保率提高到95%，发展多层次、多支柱养老保险体系。
+										如何进一步提高养老保险参保率？何为多支柱养老保险体系，如何发展？记者采访了人社部相关司局负责人和专家。
+										放开灵活就业人员在就业地参保户籍限制...
+									</div>
+									<div class="article-relative">
+										<div class="date">2021-07-15</div>
+										<div class="state">
+											<i class="iconfont icon-pinglun">&nbsp;115&nbsp;</i>
+											<i class="iconfont icon-shoucang">&nbsp;65&nbsp;</i>
+											<i class="iconfont icon-zan">&nbsp;369&nbsp;</i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-item">
+								<div class="item-img">
+									<img src="../../images/img/4.png" alt="" />
+								</div>
+								<div class="content">
+									<h1 class="title">
+										<a href="/web/topic" target="_blank"
+											>中国式养老交出新时代新答卷</a
+										>
+									</h1>
+									<div class="detail">
+										当前，我国60岁及以上人口为2.64亿，占总人口的18.7%。当“银发浪潮”迎面而来，如何安放这些老年人的夕阳人生，让他们都能享有幸福美满的晚年生活，成为新时代中国式养老必须回答好的时代命题...
+									</div>
+									<div class="article-relative">
+										<div class="date">2021-07-15</div>
+										<div class="state">
+											<i class="iconfont icon-pinglun">&nbsp;125&nbsp;</i>
+											<i class="iconfont icon-shoucang">&nbsp;98&nbsp;</i>
+											<i class="iconfont icon-zan">&nbsp;329&nbsp;</i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-item">
+								<div class="item-img">
+									<img src="../../images/img/1.png" alt="" />
+								</div>
+								<div class="content">
+									<h1 class="title">
+										<a href="/web/topic" target="_blank">国有大行首个养老品牌亮相 交行发布金融战略“二十条”
+										</a>
+									</h1>
+									<div class="detail">
+										交行昨日正式公布了“交银养老”战略行动计划20条措施。20条措施围绕养老金金融、养老服务金融、养老产业金融三大领域展开，涉及金融系列产品、服务、保障、融资以及网点建设等多方面...
+									</div>
+									<div class="article-relative">
+										<div class="date">2021-06-24</div>
+										<div class="state">
+											<i class="iconfont icon-pinglun">&nbsp;255&nbsp;</i>
+											<i class="iconfont icon-shoucang">&nbsp;153&nbsp;</i>
+											<i class="iconfont icon-zan">&nbsp;469&nbsp;</i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-item">
+								<div class="item-img">
+									<img src="../../images/img/2.png" alt="" />
+								</div>
+								<div class="content">
+									<h1 class="title">
+										<a href="/web/topic" target="_blank">为养老事业提供更多金融支持
+										</a>
+									</h1>
+									<div class="detail">
+										近日，为了推动商业养老保险加快发展，更好地服务多层次、多支柱养老保险体系建设，银保监会办公厅印发《关于开展专属商业养老保险试点的通知》，决定自6月1日起，由6家人身保险公司...
+									</div>
+									<div class="article-relative">
+										<div class="date">2021-06-07</div>
+										<div class="state">
+											<i class="iconfont icon-pinglun">&nbsp;156&nbsp;</i>
+											<i class="iconfont icon-shoucang">&nbsp;89&nbsp;</i>
+											<i class="iconfont icon-zan">&nbsp;402&nbsp;</i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="more-item" href="#"><div>查看更多 ></div></a>
+						</div>
+					</div>
+					<div class="down-right">
+						<!-- 学习统计卡片 -->
+						<div class="card-item">
+							<div class="card-title">
+								<div class="line"></div>
+								&nbsp;基本信息							</div>
+							<div class="card-content">
+								<div class="rank">
+									<div class="type">
+										<i id="orange" class="iconfont icon-zhuzhuangtu"></i>
+										&nbsp;&nbsp;成立时间
+									</div>
+									<div class="t-time"><span>2001年7月3日&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i id="yellow" class="iconfont icon-shijian"></i>
+										&nbsp;&nbsp;创立年限
+									</div>
+									<div class="t-time"><span>20&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i id="green" class="iconfont icon-16"></i>
+										&nbsp;&nbsp;机构赞助
+									</div>
+									<div class="t-time"><span>68&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i id="blue" class="iconfont icon-icon_A"></i>
+										&nbsp;&nbsp;客户总数
+									</div>
+									<div class="t-time"><span>24,700&nbsp;</span></div>
+								</div>
+							</div>
+						</div>
+						<!-- 三会一课卡片 -->
+						<div class="card-item">
+							<div class="card-title">
+								<div class="line"></div>
+								&nbsp;院系构成
+							</div>
+							<div class="card-content">
+								<div class="rank">
+									<div class="type">
+										<i
+											style="color: rgb(101,180,158); font-weight: bolder"
+											class="iconfont icon-lingdang"
+										></i>
+										&nbsp;&nbsp;院系董事
+									</div>
+									<div class="t-time"><span>4&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i
+											id="orange"
+											class="iconfont icon-xueshengdangzhibudahui"
+										></i>
+										&nbsp;&nbsp;专业医师
+									</div>
+									<div class="t-time"><span>78&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i id="green" class="iconfont icon-huiyi"></i>
+										&nbsp;&nbsp;普通护工
+									</div>
+									<div class="t-time"><span>178&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i
+											id="yellow"
+											class="iconfont icon-xueshengdangzhibudahui"
+										></i>
+										&nbsp;&nbsp;高级人员
+									</div>
+									<div class="t-time"><span>93&nbsp;</span></div>
+								</div>
+								<div class="rank">
+									<div class="type">
+										<i id="blue" class="iconfont icon-jubandangke"></i>
+										&nbsp;&nbsp;维护人员
+									</div>
+									<div class="t-time"><span>36&nbsp;</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="logo">
+			</div>
+			<div class="contents">
+				<h3 class="content">
+					版权所有：梅岭社区·颐养中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</h3>
+				<h3 class="content">邮箱：email@csu.cn.com</h3>
+				<h3 class="content">
+					联系方式：430-808-8888
+				</h3>
+			</div>
+		</footer>
+
+		<div id="success" class="success-message" style="display: none">
+			<img src="icon/正确.png" alt="" />
+			<h3 class="success-text">成功消息框</h3>
+		</div>
+		<div id="warning" class="warning-message" style="display: none">
+			<img src="icon/警告.png" alt="" />
+			<h3 class="warning-text">警告消息框</h3>
+		</div>
+
+		<script src="../../js/response.js"></script>
+		<script src="../../js/banner.js"></script>
+		<script>
+			window.onload = function () {
+				var last = document.referrer;
+				console.log(last);
+				if (
+					last == "http://127.0.0.1:5500/login.html" ||
+					last == "http://172.16.160.43/" ||
+					last == "http://172.16.160.43/login.html"
+				) {
+					success_message_come(success, "登录成功！");
+				}
+				banner();
+			};
+		</script>
+	</body>
+</html>

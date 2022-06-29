@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+		/>
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../../css/first/navbar.css" />
+		<link rel="stylesheet" href="../../css/first/reponse_glo.css" />
+		<link rel="stylesheet" href="../../css/first/history.css" />
+		<link rel="stylesheet" href="../../css/first/alifont.css" />
+		<link rel="stylesheet" href="../../css/first/navbar.css" />
+		<link rel="stylesheet" href="../../css/first/reponse_glo.css" />
+		<link rel="stylesheet" href="../../css/first/topic.css" />
+		<link rel="stylesheet" href="../../css/first/index.css" />
+		<link rel="stylesheet" href="../../css/first/css.css" />
+		<link rel="stylesheet" href="../../css/first/common.css" />
+		<title>梅岭社区·颐养中心</title>
+		<style>
+			body {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url(../../images/img/水墨3ps.png) no-repeat 100%;
+				background-size: cover;
+				background-attachment: fixed;
+				/* z-index: -1; */
+				transition: 0.3s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bgimg">
+			<nav>
+				<div class="user">
+					<a href=""><img src="../../images/first/logo1.png" alt="" /></a>
+				</div>
+				<!--<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+				<div class="search">
+					<div class="sput">
+						<input
+							type="text"
+							name="search"
+							placeholder="搜索内容"
+							id="searchContent"
+						/>
+						<a href="#"><div class="icon"></div></a>
+						<!-- <img src="icon/搜索.png" alt="" /> -->
+					</div>
+					<!-- 汉堡按钮 -->
+					<div class="burger" id="toggle" onclick="navVisi()">
+						<div class="top-line"></div>
+						<div class="middle-line"></div>
+						<div class="bottom-line"></div>
+					</div>
+				</div>
+			</nav>
+			<div class="navbar">
+				<ul id="visiable" class="nav-menu">
+					<a href="/web/index"
+					>
+						<li>
+							<i class="iconfont icon-shouye"></i>
+							首页
+						</li>
+					</a
+					>
+					<a href="/web/learn" class="active"
+					>
+						<li>
+							<i class="iconfont icon-lishi"></i>
+							梅岭动态
+						</li>
+					</a
+					>
+					<a href="/web/theorystudy"
+					>
+						<li>
+							<i class="iconfont icon-lilunxuexi"></i>
+							百科问答
+						</li>
+					</a
+					>
+					<a href="/web/organization"
+					>
+						<li>
+							<i class="iconfont icon-zixun"></i>
+							健康养生
+						</li>
+					</a
+					>
+					<a href="/web/social"
+					>
+						<li>
+							<i class="iconfont icon-deploymentunit"></i>
+							养老社区
+						</li>
+					</a
+					>
+					<a href="/web/center"
+					>
+						<li>
+							<i class="iconfont icon-gerenzhongxin"></i>
+							关于我们
+						</li>
+					</a
+					>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="train_banner" id="swiper">
+					<ul class="banner_images clearfix">
+						<li>
+							<a href="/web/topic" target="_target">
+								<img src="../../images/first/banner2.jpg" alt=""/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="first">
+				<a href="#">
+					<img src="img/党史答题.jpg" alt="" />
+				</a>
+			</div>
+			<div class="history-container">
+				<div class="left-half">
+					<div class="list-header">养老视点</div>
+					<div class="list-bottom"></div>
+					<div class="list-items">
+						<a href="http://www.cnsf99.com/Detail/index.html?id=454&aid=94394" class="list-item">
+							<span class="title">让适老化改造改到老人心坎里</span>
+							<span class="date">2021-07-14</span>
+						</a>
+						<a href="http://www.cnsf99.com/Detail/index.html?id=454&aid=94173" class="list-item">
+							<span class="title">彰显人民情怀，为党旗增光添彩——我国养老服务朝着高质量发展迈进</span>
+							<span class="date">2021-07-09</span>
+						</a>
+						<a href="http://www.cnsf99.com/Detail/index.html?id=454&aid=94183" class="list-item">
+							<span class="title">推动老龄事业全面协调可持续发展</span>
+							<span class="date">2021-07-09</span>
+						</a>
+						<a href="http://www.cnsf99.com/Detail/index.html?id=454&aid=94045" class="list-item">
+							<span class="title">“老年版”App兴起，让老年人享受更多智能服务</span>
+							<span class="date">2021-07-06</span>
+						</a>
+						<a href="http://www.cnsf99.com/Detail/index.html?id=454&aid=93881" class="list-item">
+							<span class="title">“银发群体”如何跑出数字加速度？</span>
+							<span class="date">2021-07-2</span>
+						</a>
+						<a href="http://www.cnsf99.com/Detail/index.html?id=454&aid=93805" class="list-item">
+							<span class="title">为老年人“定制”新家</span>
+							<span class="date">2021-06-30</span>
+						</a>
+						<a class="more-item" href="http://www.cnsf99.com/News/index?page=1&id=454"><div>查看更多 ></div></a>
+					</div>
+					<div class="list-header">政策法规</div>
+					<div class="list-bottom"></div>
+					<div class="list-items">
+						<div class="list-items">
+							<a href="http://www.cnsf99.com/Detail/index.html?id=459&aid=94100" class="list-item">
+								<span class="title">国家卫生健康委关于开展第四届全国“敬老文明号”创建活动的通知</span>
+								<span class="date">2021-07-07</span>
+							</a>
+							<a href="http://www.cnsf99.com/Detail/index.html?id=459&aid=93729" class="list-item">
+								<span class="title">国家卫生健康委关于学习贯彻中央政治局会议精神落实积极应对人口老龄化重大政策举措的通知</span>
+								<span class="date">2021-06-28</span>
+							</a>
+							<a href="http://www.cnsf99.com/Detail/index.html?id=459&aid=93671" class="list-item">
+								<span class="title">国家卫生健康委办公厅关于组织开展2021年老年健康宣传周活动的通知</span>
+								<span class="date">2021-06-25</span>
+							</a>
+							<a href="http://www.cnsf99.com/Detail/index.html?id=459&aid=93284" class="list-item">
+								<span class="title">国家卫生健康委办公厅关于实施进一步便利老年人就医举措的通知</span>
+								<span class="date">2021-06-16</span>
+							</a>
+							<a href="http://www.cnsf99.com/Detail/index.html?id=459&aid=93236" class="list-item">
+								<span class="title">国家卫生健康委关于做好2021年“智慧助老”有关工作的通知</span>
+								<span class="date">2021-06-15</span>
+							</a>
+							<a href="" class="list-item">
+								<span class="title">全国养老护理职业技能大赛标识和宣传海报征集公告</span>
+								<span class="date">2021-05-24</span>
+							</a>
+							<a class="more-item" href="http://www.cnsf99.com/News/index/id/459">查看更多 ></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-half">
+					<div class="list-header">梅岭动态</div>
+					<div class="list-bottom"></div>
+					<div class="list-items">
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14704722782665.html" class="list-item">
+							<span class="title">唱响"红歌" 纪念抗战胜利70周年</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14704723962666.html" class="list-item">
+							<span class="title">梅岭社区：开展"重阳前夕送温暖 送光明"活动</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14613791132521.html" class="list-item">
+							<span class="title">梅岭社区：携手优伢仕牙科医院健康义诊</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14613789942520.html" class="list-item">
+							<span class="title">梅岭社区：抗战的记忆永存我心</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14467968922178.html" class="list-item">
+							<span class="title">烈日下 爱国心更浓—韶山-花明楼红色之旅圆满落幕</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14467965962177.html" class="list-item">
+							<span class="title">区街领导来梅岭社区检查安全生产工作</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14377068701353.html" class="list-item">
+							<span class="title">梅岭社区“三百三”国学大讲堂广受欢迎反响强烈</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14376165551281.html" class="list-item">
+							<span class="title">学“大学之道” 做“大成之人”</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14376162611280.html" class="list-item">
+							<span class="title">追忆雷锋精神 倡导“邻里守望”志愿服务</span>
+						</a>
+						<a href="http://hn.cncn.org.cn/changsha/meiling/news/14368620221080.html" class="list-item">
+							<span class="title">铁道富孝国学公益活动上演 养身保健系列率先登场</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				<div class="logo">
+					<img src="img/广软_圆标.png" alt="" />
+					<img src="img/favicon.png" alt="" />
+				</div>
+				<div class="contents">
+					<h3 class="content">
+						版权所有：梅岭社区·颐养中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</h3>
+					<h3 class="content">邮箱：email@csu.cn.com</h3>
+					<h3 class="content">
+						联系方式：430-808-8888
+					</h3>
+				</div>
+			</footer>
+		</div>
+
+		<script src="../../js/response.js"></script>
+	</body>
+</html>

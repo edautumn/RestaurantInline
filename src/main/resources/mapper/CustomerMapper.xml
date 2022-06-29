@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.csu.carecenter.Persistence.CustomerMapper">
+
+    <select id="getCustomer"  parameterType="int" resultType="Customer">
+        SELECT
+            CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.PHONE,
+            CUSTOMER.AGE,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION
+        FROM CUSTOMER
+        WHERE CUSTOMER.ID = #{id}
+    </select>
+
+    <select id="getCustomerBy" resultType="Customer">
+        SELECT
+            CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.PHONE,
+            CUSTOMER.AGE,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION
+        FROM CUSTOMER
+        WHERE CUSTOMER.NAME = #{name}
+        AND CUSTOMER.PHONE = #{phone}
+    </select>
+
+    <select id="getCustomerIdByNameAndPhone" resultType="int">
+        SELECT
+            CUSTOMER.ID
+        FROM CUSTOMER
+        WHERE CUSTOMER.NAME = #{custname} AND CUSTOMER.PHONE = #{phone}
+    </select>
+
+    <select id="getCustomerList"  resultType="Customer">
+        SELECT
+            CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.PHONE,
+            CUSTOMER.AGE,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION
+        FROM CUSTOMER
+    </select>
+
+    <insert id="addCustomer"  parameterType="Customer">
+        INSERT INTO CUSTOMER
+            (CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.PHONE,
+            CUSTOMER.AGE,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION)
+        VALUES
+            (#{id}, #{name}, #{sex}, #{phone}, #{age}, #{height}, #{weight}, #{birthday}, #{attention})
+    </insert>
+
+    <update id="updateCustomer"  parameterType="Customer">
+        UPDATE CUSTOMER SET
+         CUSTOMER.NAME = #{name},
+         CUSTOMER.SEX = #{sex},
+         CUSTOMER.PHONE = #{phone},
+         CUSTOMER.AGE = #{age},
+         CUSTOMER.HEIGHT = #{height},
+         CUSTOMER.WEIGHT = #{weight},
+         CUSTOMER.BIRTHDAY = #{birthday},
+         CUSTOMER.ATTENTION = #{attention}
+        WHERE CUSTOMER.ID = #{id}
+    </update>
+
+    <delete id="deleteCustomer"  parameterType="int">
+        DELETE FROM CUSTOMER
+        WHERE CUSTOMER.ID = #{id}
+    </delete>
+    
+<!--  客户的入住信息  -->
+    <select id="selectCheckinList" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID as customerID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM CUSTOMER
+    </select>
+
+    <select id="selectCheckin" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID as customerID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+        WHERE BEDANDCUST.ID = #{id}
+    </select>
+
+    <insert id="insertCheckin" parameterType="BedAndCustomer">
+        INSERT INTO BEDANDCUST
+           (BEDANDCUST.CUSTID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+            )
+        VALUES (#{customerID}, #{bedId}, #{startTime}, null)
+    </insert>
+
+    <delete id="deleteCheckin" parameterType="int">
+        DELETE FROM BEDANDCUST
+        WHERE BEDANDCUST.ID = #{id}
+    </delete>
+
+    <update id="updateCheckin" parameterType="BedAndCustomer">
+        UPDATE BEDANDCUST SET
+              BEDANDCUST.CUSTID = #{customerID},
+              BEDANDCUST.BEDID = #{bedId},
+              BEDANDCUST.STARTTIME = #{startTime}
+        WHERE BEDANDCUST.ID = #{id}
+    </update>
+
+<!--  客户的退住信息  -->
+    <select id="selectCheckoutList" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID as customerID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+    </select>
+
+    <select id="selectCheckout" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID as customerID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+        WHERE BEDANDCUST.ID = #{id}
+    </select>
+
+    <select id="selectCheckoutByCustId" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID as customerID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+        WHERE BEDANDCUST.CUSTID = #{id}
+    </select>
+
+    <insert id="insertCheckout" parameterType="BedAndCustomer">
+        INSERT INTO BEDANDCUST
+        (BEDANDCUST.CUSTID,
+         BEDANDCUST.BEDID,
+         BEDANDCUST.STARTTIME,
+         BEDANDCUST.ENDTIME
+        )
+        VALUES (#{customerID}, #{bedId}, #{startTime}, #{endTime})
+    </insert>
+
+    <update id="deleteCheckout" parameterType="BedAndCustomer">
+        UPDATE BEDANDCUST SET
+            BEDANDCUST.ENDTIME = NULL
+        WHERE BEDANDCUST.ID = #{id}
+    </update>
+
+    <update id="updateCheckout" parameterType="BedAndCustomer">
+        UPDATE BEDANDCUST SET
+            BEDANDCUST.CUSTID = #{customerID},
+            BEDANDCUST.BEDID = #{bedId},
+            BEDANDCUST.STARTTIME = #{startTime},
+            BEDANDCUST.ENDTIME = #{endTime}
+        WHERE BEDANDCUST.ID = #{id}
+    </update>
+
+</mapper>

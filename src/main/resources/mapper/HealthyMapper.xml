@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.csu.carecenter.Persistence.HealthyMapper">
+    <select id="getHealthy" resultType="Healthy">
+        SELECT
+            CUSTID AS custId,
+            TEMP,
+            PRESSURE,
+            SUGAR,
+            WEIGHT,
+            PULSE,
+            SELFCARE AS selfCare,
+            DAY
+        FROM HEALTHY
+        WHERE CUSTID =#{id} AND DAY = #{week}
+    </select>
+
+    <select id="getHealthyById" parameterType="int" resultType="Healthy">
+        SELECT
+            CUSTID AS custId,
+            TEMP,
+            PRESSURE,
+            SUGAR,
+            WEIGHT,
+            PULSE,
+            SELFCARE AS selfCare,
+            DAY
+        FROM HEALTHY
+        WHERE CUSTID =#{id}
+    </select>
+
+    <update id="updateHealthy" parameterType="Healthy">
+        UPDATE HEALTHY
+        SET TEMP = #{temp},
+            PRESSURE = #{pressure},
+            SUGAR = #{sugar},
+            WEIGHT = #{weight},
+            PULSE = #{pulse},
+            SELFCARE = #{selfCare}
+        WHERE CUSTID = #{custId} AND DAY = #{day}
+    </update>
+
+    <select id="getAllHealthy" parameterType="int" resultType="Healthy">
+    SELECT
+        CUSTID AS custId,
+        TEMP,
+        PRESSURE,
+        SUGAR,
+        WEIGHT,
+        PULSE,
+        SELFCARE AS selfCare,
+        DAY
+    FROM HEALTHY
+    WHERE CUSTID =#{id}
+    ORDER BY mark ASC
+    </select>
+
+    <select id="getAllList" resultType="Healthy">
+        SELECT
+            CUSTID AS custId,
+            TEMP,
+            PRESSURE,
+            SUGAR,
+            WEIGHT,
+            PULSE,
+            SELFCARE AS selfCare,
+            DAY
+        FROM HEALTHY
+    </select>
+
+    <select id="getHealthyVO" resultType="HealthyVO">
+        SELECT
+            HEALTHY.CUSTID AS custId,
+            HEALTHY.TEMP,
+            HEALTHY.PRESSURE,
+            HEALTHY.SUGAR,
+            HEALTHY.WEIGHT,
+            HEALTHY.PULSE,
+            HEALTHY.SELFCARE AS selfCare,
+            HEALTHY.DAY,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.SEX,
+            CUSTOMER.NAME,
+            CUSTOMER.ATTENTION
+        FROM HEALTHY, CUSTOMER
+        WHERE HEALTHY.CUSTID = #{custId} AND HEALTHY.CUSTID = CUSTOMER.ID AND DAY = #{week}
+    </select>
+
+    <insert id="addHealthy" parameterType="Healthy">
+        INSERT INTO HEALTHY
+        (CUSTID,TEMP,PRESSURE,SUGAR,WEIGHT,PULSE,SELFCARE,DAY)
+        VALUES
+        (#{custId},#{temp},#{pressure},#{sugar},#{weight},#{pulse},#{selfCare},#{day})
+    </insert>
+
+    <delete id="deleteHealthy">
+        DELETE FROM HEALTHY
+        WHERE CUSTID = #{custId}
+    </delete>
+</mapper>

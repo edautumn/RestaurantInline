@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/component/pear/css/pear.css" />
+    <link rel="stylesheet" href="../../css/admin/css/other/person.css" />
+    <script src="../../css/component/layui/layui.js"></script>
+    <script src="../../css/component/pear/pear.js"></script>
+    <style>
+        .button1 {
+            border-radius: 2px;
+            background-color: #97C0A5;
+            width: 100%;
+            height: 30px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            border: none;
+            font-family: 'Arial';
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="pear-container">
+<div class="layui-row layui-col-space10">
+    <div class="layui-col-md3">
+        <div class="layui-card">
+            <div class="layui-card-body" style="padding: 25px;">
+                <div class="text-center layui-text">
+                    <div class="user-info-head" id="userInfoHead">
+                        <img src="../../css/admin/images/avatar.jpg" id="userAvatar" width="115px" height="115px" alt="">
+                    </div>
+                    <h2 style="padding-top: 20px;font-size: 20px;"  th:text="${name}">就眠仪式</h2>
+                    <p style="padding-top: 8px;margin-top: 10px;font-size: 13.5px;">China ， 中国</p>
+                </div>
+            </div>
+            <div style="height: 45px;border-top: 1px whitesmoke solid;text-align: center;line-height: 45px;font-size: 13.5px;">
+                <span>今日事 ，今日毕</span>
+            </div>
+        </div>
+
+        <div class="layui-card">
+            <div class="layui-card-header">
+                客服
+            </div>
+            <div class="layui-card-body">
+                <form action="/view">
+                    <p style="color: #34495e;margin: 0;font-size: 0.9em;">Your Name(必填):</p>
+                    <br>
+                    <input type="text" name="username" id="username" class="layui-input" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+                    <br>
+                    <button class="button1" type="submit">客服</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md9">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                用户反馈
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" id="adviceParent">
+                    <div class="layui-tab-content" id="advice">
+                        <div class="layui-tab-item layui-show">
+                            <div class="layui-row layui-col-space10" style="margin: 15px;" th:each="mail:${mailList}">
+                                <a th:href="@{/admin/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.sentDate})}">
+                                    <div class="layui-col-md1">
+                                        <img src="../../images/reback.png" style="width: 100%;height: 100%;border-radius: 5px;" />
+                                    </div>
+                                    <div class="layui-col-md11" style="height: 80px;">
+                                        <div class="title" id="from" name="from" th:text="${mail.from}">提议：应当增加颐养中心娱乐活动设置</div>
+                                        <div class="content" id="subject" name="subject" th:text="${mail.subject}">
+                                            当前，颐养中心中娱乐活动限于读书，运动，打牌等等，随着时代的变化，我认为颐养中心应当增设比如电影院，KTV等活动...
+                                        </div>
+                                        <div class="comment" id="sentDate" name="sentDate" th:text="${mail.sentDate}"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../css/component/layui/layui.js"></script>
+<script>
+    layui.use(['jquery', 'element', 'layer'], function () {
+        var element = layui.element,
+            layer = layui.layer,
+            $ = layui.jquery;
+
+        $("#userAvatar").attr("src", parent.layui.$(".layui-nav-img").attr("src"));
+
+        window.callback = function (data) {
+            layer.close(data.index);
+            $("#userAvatar").attr("src", data.newAvatar);
+            parent.layui.$(".layui-nav-img").attr("src", data.newAvatar);
+        }
+
+        $("#userAvatar").click(function () {
+            layer.open({
+                type: 2,
+                title: '更换图片',
+                shade: 0.1,
+                area: ["900px", "500px"],
+                content: '/admin/upload',
+                btn: ['确定', '取消'],
+                yes: function (index, layero) {
+                    window['layui-layer-iframe' + index].submitForm();
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
